@@ -1,5 +1,7 @@
 package java_advance;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 
@@ -9,7 +11,7 @@ public class Advance1 {
 		Scanner scanner = new Scanner(System.in);
 		
 		while(true) {
-		
+			
 		System.out.println("学生の名前を入力してください");
 		
 		String name = scanner.nextLine();
@@ -31,19 +33,53 @@ public class Advance1 {
 			System.out.println(name +"さんの評価は1");
 		}
 		
+	     scanner.nextLine();
+		
 		System.out.println("入力を続けますか？（yes/no）");
 		
 		String continueString = scanner.nextLine();
-
-		if(continueString.equals("no")){
-		break;
-		}
-	}
-		  scanner.close();
 		
-	}
-
-}
+		if(continueString.equals("no")){
+			
+			 Map<Integer,Integer> EvaluatePeople = new HashMap<Integer,Integer>();
+			 int[] scoreArray = { 0, 0, 0, 0, 0};
+			
+			for(int i = 0; i >  ; i++) {
+				EvaluatePeople.put(score,0);
+				   
+					 
+				     if(score >= 90) {
+				    	 EvaluatePeople.put(score,++scoreArray[0]);
+				    	 System.out.println("5:" + +EvaluatePeople.get(score) + "人");
+				    	 System.out.println(+scoreArray[0]);
+				    	 
+				     } else if(score >= 70) {
+				    	 EvaluatePeople.put(score,++scoreArray[1]);
+				    	 System.out.println("4:" + +EvaluatePeople.get(score) + "人");
+				    	 System.out.println(+scoreArray[1]);
+				    	
+				     } else if(score >= 50) {
+				    	 EvaluatePeople.put(score,++scoreArray[2]);
+				    	 System.out.println("3:" + +EvaluatePeople.get(score) + "人");
+				    	 System.out.println(+scoreArray[2]);
+				    	 
+				     } else if(score >= 30) {
+				    	 EvaluatePeople.put(score,++scoreArray[3]);
+				    	 System.out.println("2:" + +EvaluatePeople.get(score) + "人");
+				    	 System.out.println(+scoreArray[3]);
+				    	 
+				     } else if(score <= 30){
+				    	 EvaluatePeople.put(score,++scoreArray[4]);
+				    	 System.out.println("1:" + +EvaluatePeople.get(score) + "人");
+				    	 System.out.println(+scoreArray[4]);
+				     }
+			    }
+			break;
+		     }
+		  }
+	     scanner.close();	
+      }
+  }
 
 
 //# 練習2
